@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ubuntu_wget:
+    build: .  # Uses the Dockerfile in the current directory
+    container_name: ubuntu_wget
+    volumes:
+      - .:/root  # Mounts the current directory to /data inside the container
+    working_dir: /root
+    tty: true
+    stdin_open: true
+    environment:
+      - DEBIAN_FRONTEND=noninteractive  # Prevents tzdata from prompting for input
+      - TZ=America/New_York  # Sets timezone to US Eastern Time
