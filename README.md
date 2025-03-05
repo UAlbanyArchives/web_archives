@@ -26,14 +26,14 @@ wget -r -l 3 -p --warc-file=[collection_name]/[collection_name] --warc-cdx --con
 
 Convert to wacx
 ```
-wacz create -o data/[collection_name].wacz data/[collection_name].warc.gz -t --detect-pages
+wacz create -o [collection_name]/[collection_name].wacz [collection_name]/[collection_name].warc.gz -t --detect-pages
 ```
 
 #### Optionally create a pages.jsonl to review and pass that when creating the wacz
 This will filter by domain:
 ```
-python3 pages.py data/[collection_name].warc.gz "www.albany.edu"
-wacz create -o data/[collection_name].wacz data/[collection_name].warc.gz -p data/[collection_name]_pages.jsonl
+python3 pages.py [collection_name]/[collection_name].warc.gz "www.albany.edu"
+wacz create -o [collection_name]/[collection_name].wacz [collection_name]/[collection_name].warc.gz -p [collection_name]/[collection_name]_pages.jsonl
 ```
 
 ### Close the container
