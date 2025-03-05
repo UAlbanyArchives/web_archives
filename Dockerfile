@@ -6,6 +6,7 @@ WORKDIR /data
 
 # Install system dependencies (Python, pip, and build essentials)
 RUN apt-get update && apt-get install -y \
+    wget \
     python3 \
     python3-pip \
     python3-dev \

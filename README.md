@@ -16,7 +16,12 @@ mkdir [collection_name]
 
 Run wget recursive at 3 levels
 ```
-wget -r -l 3 -p --warc-file=[collection_name] --warc-cdx --convert-links --adjust-extension --span-hosts --no-parent -P data/[collection_name] [URL]
+wget -r -l 3 -p --warc-file=[collection_name]/[collection_name] --warc-cdx --convert-links --adjust-extension --span-hosts --no-parent -P [collection_name] [URL]
+```
+
+Restrict to URL domain
+```
+wget -r -l 3 -p --warc-file=[collection_name]/[collection_name] --warc-cdx --convert-links --adjust-extension --no-parent -P [collection_name] [URL]
 ```
 
 Convert to wacx

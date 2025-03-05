@@ -5,7 +5,7 @@ services:
     build: .  # Uses the Dockerfile in the current directory
     container_name: ubuntu_wget
     volumes:
-      - .:/root  # Mounts the current directory to /data inside the container
+      - ./data:/root  # Mounts the current directory to /data inside the container
     working_dir: /root
     tty: true
     stdin_open: true
